@@ -38,8 +38,8 @@ export default function Website() {
         <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 pt-16 pb-20 grid md:grid-cols-2 gap-10 items-center">
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <div className="flex items-center gap-2 mb-4">
-              <Badge>🎂 Repostería artesanal</Badge>
-              <Badge>✨ Hecho con amor</Badge>
+              <Badge variant="silver">🎂 Repostería artesanal</Badge>
+              <Badge variant="gold">✨ Hecho con amor</Badge>
             </div>
             <h1 className="text-4xl md:text-6xl font-semibold leading-tight tracking-tight">
               Bouchée — Postería <span className="text-rose-600">Exquisita</span>
@@ -62,20 +62,38 @@ export default function Website() {
               </a>
             </div>
             <div className="mt-6 text-sm text-gray-600">
-              📍 Colombia · Envíos locales · Entrega para eventos
+              📍Tunja · Envíos locales · Entrega para eventos
             </div>
           </motion.div>
 
-          {/* Visual placeholder gallery */}
+          {/* Visual gallery */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="grid grid-cols-3 gap-3 md:gap-4"
           >
-            {["Cupcakes de suculentas","Torta floral","Cheesecake frutos rojos","Macarons deluxe","Cupcakes vintage","Tartaletas de limón"].map((label, i) => (
-              <div key={label} className={`aspect-square rounded-2xl overflow-hidden shadow-sm border border-gray-100 relative ${i % 2 === 0 ? "bg-gradient-to-br from-rose-100 to-pink-50" : "bg-gradient-to-br from-pink-100 to-rose-50"}`}>
-                <span className="absolute bottom-2 left-2 text-xs bg-white/80 px-2 py-1 rounded-full backdrop-blur">{label}</span>
+            {[
+              { src: "/images/merengue_acercamiento.jpeg", alt: "Cupcakes de suculentas" },
+              { src: "/images/pave.jpeg", alt: "Torta floral" },
+              { src: "/images/pie_arandanos.jpeg", alt: "Cheesecake frutos rojos" },
+              { src: "/images/pie_limon.jpeg", alt: "Macarons deluxe" },
+              { src: "/images/pie_mango.jpeg", alt: "Cupcakes vintage" },
+              { src: "/images/pie_oreo.jpeg", alt: "Tartaletas de limón" }
+            ].map((item, i) => (
+              <div key={item.alt} className="aspect-square rounded-2xl overflow-hidden shadow-sm border border-gray-100 relative">
+                <img 
+                  src={item.src} 
+                  alt={item.alt}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'block';
+                  }}
+                />
+                <div className={`absolute inset-0 ${i % 2 === 0 ? "bg-gradient-to-br from-rose-100 to-pink-50" : "bg-gradient-to-br from-pink-100 to-rose-50"}`} style={{ display: 'none' }}>
+                  <span className="absolute bottom-2 left-2 text-xs bg-white/80 px-2 py-1 rounded-full backdrop-blur">{item.alt}</span>
+                </div>
               </div>
             ))}
           </motion.div>
@@ -199,7 +217,7 @@ export default function Website() {
             <h4 className="font-semibold">Datos de contacto</h4>
             <ul className="mt-3 text-sm text-gray-700 space-y-2">
               <li>📱 WhatsApp: <a className="text-rose-700 hover:text-rose-800" href="https://wa.me/573104883365">+57 310 488 3365</a></li>
-              <li>✉️ Correo: <a className="text-rose-700 hover:text-rose-800" href="mailto:laura.duenas02@uptc.edu.co?subject=Pedido%20Bouch%C3%A9e">laura.duenas02@uptc.edu.co</a></li>
+              <li>✉️ Correo: <a className="text-rose-700 hover:text-rose-800" href="mailto:boucheepostreria@gmail.com?subject=Pedido%20Bouch%C3%A9e">boucheepostreria@gmail.com</a></li>
               <li>📸 Instagram: <a className="text-rose-700 hover:text-rose-800" href="https://www.instagram.com/boucheepostreria?igsh=MTFuaThjYmVwMWtmdg==" target="_blank" rel="noreferrer">@boucheepostreria</a></li>
               <li>⏰ Horario: Lun–Sáb · 9:00–18:00</li>
             </ul>
