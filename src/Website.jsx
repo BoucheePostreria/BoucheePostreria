@@ -84,12 +84,12 @@ export default function Website() {
             className="grid grid-cols-3 gap-3 md:gap-4"
           >
             {[
-              { src: "/images/merengue_acercamiento.jpeg", alt: "Merengue artesanal" },
-              { src: "/images/pave.jpeg", alt: "Pavé tradicional" },
-              { src: "/images/pie_arandanos.jpeg", alt: "Pie de arándanos" },
-              { src: "/images/pie_limon.jpeg", alt: "Pie de limón" },
-              { src: "/images/pie_mango.jpeg", alt: "Pie de mango" },
-              { src: "/images/pie_oreo.jpeg", alt: "Pie de Oreo" }
+              { src: "./images/merengue_acercamiento.jpeg", alt: "Merengue artesanal" },
+              { src: "./images/pave.jpeg", alt: "Pavé tradicional" },
+              { src: "./images/pie_arandanos.jpeg", alt: "Pie de arándanos" },
+              { src: "./images/pie_limon.jpeg", alt: "Pie de limón" },
+              { src: "./images/pie_mango.jpeg", alt: "Pie de mango" },
+              { src: "./images/pie_oreo.jpeg", alt: "Pie de Oreo" }
             ].map((item, i) => (
               <div key={item.alt} className="aspect-square rounded-2xl overflow-hidden shadow-sm border border-gray-100 relative group">
                 <img 
