@@ -45,7 +45,7 @@ export default function Website() {
              {/* Imagen decorativa antes del título */}
              <div className="w-6 h-6 mx-auto md:mx-0 mb-2 rounded-full overflow-hidden shadow-lg bg-red-500">
                <img 
-                 src="/images/hero.jpg" 
+                 src="./images/hero.jpg" 
                  alt="Bouchée Logo" 
                  className="w-full h-full object-cover"
                />
