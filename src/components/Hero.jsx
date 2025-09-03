@@ -6,10 +6,10 @@ function Hero() {
   return (
     <section id="home" className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute -top-24 -right-24 h-72 w-72 md:h-96 md:w-96 rounded-full bg-rose-200/50 blur-2xl" />
+        <div className="absolute -top-4 -right-24 h-72 w-72 md:h-96 md:w-96 rounded-full bg-rose-200/50 blur-2xl" />
         <div className="absolute -bottom-24 -left-24 h-72 w-72 md:h-96 md:w-96 rounded-full bg-pink-200/50 blur-2xl" />
       </div>
-      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 pt-5 pb-16 grid md:grid-cols-2 gap-5 items-center">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 pt-5 pb-16 grid md:grid-cols-2 gap-10 items-center">
         <motion.div 
           initial={{ opacity: 0, y: 10 }} 
           animate={{ opacity: 1, y: 0 }} 

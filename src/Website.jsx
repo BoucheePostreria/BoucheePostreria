@@ -1,6 +1,4 @@
 import React from "react";
-import Section from "./components/Section";
-import Card from "./components/Card";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Opinions from "./components/Opinions";
@@ -8,41 +6,14 @@ import Contact from "./components/Contact";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
+import Menu from "./components/Menu";
 
 export default function Website() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-primary/10 via-secondary/10 to-white text-gray-900 antialiased">
       <Navbar />
       <Hero />
-      {/* MENU */}
-      <Section id="menu" title="Menú destacado" subtitle="Sabores que enamoran. Personalizamos diseños y mensajes.">
-        <div className="grid md:grid-cols-3 gap-6">
-          {[
-            {name: "Cupcakes Flores y Suculentas", desc: "Caja x6 o x12. Decoración premium.", from: "desde $"},
-            {name: "Cheesecake Sabores Surtidos", desc: "Clásico, maracuyá o frutos rojos.", from: "desde $"},
-            {name: "Pie Sabores Surtidos", desc: "Paleta de colores y sabores.", from: "desde $"},
-            {name: "Merengues", desc: "Mix box para regalo.", from: "desde $"},
-          ].map((p, i) => (
-            <Card key={i} className="p-6 flex flex-col">
-              <div className="flex items-start justify-between">
-                <h3 className="text-lg font-semibold">{p.name}</h3>
-                <span className="text-xs rounded-full bg-rose-100 text-rose-700 px-2 py-1 uppercase tracking-wide">Popular</span>
-              </div>
-              <p className="mt-2 text-gray-600 text-sm flex-1">{p.desc}</p>
-              <div className="mt-4 flex items-center justify-between">
-                <span className="text-sm text-gray-700">{p.from}</span>
-                <a
-                  href={`https://wa.me/573104883365?text=Hola%20Bouch%C3%A9e%2C%20quiero%20informaci%C3%B3n%20sobre%20${encodeURIComponent(p.name)}`}
-                  className="text-rose-700 hover:text-rose-800 text-sm font-medium"
-                >
-                  Pedir ➜
-                </a>
-              </div>
-            </Card>
-          ))}
-        </div>
-      </Section>
-      
+      <Menu/>
       <Gallery />
       <About />
       <Opinions />
