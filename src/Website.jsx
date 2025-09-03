@@ -1,13 +1,13 @@
 import React from "react";
-import { motion } from "framer-motion";
 import Section from "./components/Section";
 import Card from "./components/Card";
-import Badge from "./components/Badge";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Opinions from "./components/Opinions";
 import Contact from "./components/Contact";
 import About from "./components/About";
+import Footer from "./components/Footer";
+import Gallery from "./components/Gallery";
 
 export default function Website() {
   return (
@@ -19,12 +19,10 @@ export default function Website() {
       <Section id="menu" title="Menú destacado" subtitle="Sabores que enamoran. Personalizamos diseños y mensajes.">
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            {name: "Cupcakes firma", desc: "Caja x6 o x12. Decoración premium.", from: "desde $"},
-            {name: "Tortas personalizadas", desc: "Diámetros 15–25 cm. Diseño a medida.", from: "desde $"},
-            {name: "Cheesecake", desc: "Clásico, maracuyá o frutos rojos.", from: "desde $"},
-            {name: "Macarons", desc: "Paleta de colores y sabores.", from: "desde $"},
-            {name: "Brownies & blondies", desc: "Mix box para regalo.", from: "desde $"},
-            {name: "Mesa dulce", desc: "Catering de postres para eventos.", from: "cotiza"},
+            {name: "Cupcakes Flores y Suculentas", desc: "Caja x6 o x12. Decoración premium.", from: "desde $"},
+            {name: "Cheesecake Sabores Surtidos", desc: "Clásico, maracuyá o frutos rojos.", from: "desde $"},
+            {name: "Pie Sabores Surtidos", desc: "Paleta de colores y sabores.", from: "desde $"},
+            {name: "Merengues", desc: "Mix box para regalo.", from: "desde $"},
           ].map((p, i) => (
             <Card key={i} className="p-6 flex flex-col">
               <div className="flex items-start justify-between">
@@ -46,7 +44,7 @@ export default function Website() {
         </div>
       </Section>
 
-      {/* GALERÍA */}
+      {/* GALERÍA 
       <Section id="galeria" title="Galería" subtitle="Un vistazo a nuestros acabados y estilos.">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {Array.from({ length: 9 }).map((_, i) => (
@@ -70,6 +68,8 @@ export default function Website() {
           </a>
         </div>
       </Section>
+      */}
+      <Gallery />
       <About />
       <Opinions />
 
@@ -92,19 +92,8 @@ export default function Website() {
       </section>
 
       <Contact />
-
-      {/* FOOTER */}
-      <footer className="py-10 px-6 md:px-10 lg:px-16 border-t border-gray-100 text-sm">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
-          <div>© {new Date().getFullYear()} Bouchée · Postería Exquisita</div>
-          <div className="flex items-center gap-4">
-            <a href="#menu" className="hover:text-rose-700">Menú</a>
-            <a href="#galeria" className="hover:text-rose-700">Galería</a>
-            <a href="https://www.instagram.com/boucheepostreria?igsh=MTFuaThjYmVwMWtmdg==" target="_blank" rel="noreferrer" className="hover:text-rose-700">Instagram</a>
-          </div>
-        </div>
-      </footer>
-
+      <Footer />
+  
       {/* Floating WhatsApp */}
       <a
         href="https://wa.me/573104883365?text=Hola%20Bouch%C3%A9e%2C%20quiero%20hacer%20un%20pedido"
