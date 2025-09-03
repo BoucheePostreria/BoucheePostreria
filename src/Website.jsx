@@ -14,7 +14,6 @@ export default function Website() {
     <div className="min-h-screen bg-gradient-to-b from-primary/10 via-secondary/10 to-white text-gray-900 antialiased">
       <Navbar />
       <Hero />
-
       {/* MENU */}
       <Section id="menu" title="Menú destacado" subtitle="Sabores que enamoran. Personalizamos diseños y mensajes.">
         <div className="grid md:grid-cols-3 gap-6">
@@ -43,6 +42,7 @@ export default function Website() {
           ))}
         </div>
       </Section>
+      
       <Gallery />
       <About />
       <Opinions />
