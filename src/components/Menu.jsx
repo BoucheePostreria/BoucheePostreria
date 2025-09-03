@@ -11,7 +11,7 @@ function Menu() {
             {name: "Cheesecake Sabores Surtidos", desc: "Clásico, maracuyá o frutos rojos.", from: "desde $"},
             {name: "Pie Sabores Surtidos", desc: "Paleta de colores y sabores.", from: "desde $"},
             {name: "Merengues", desc: "Mix box para regalo.", from: "desde $"},
-            {name: "Pave", desc: "Mix box para regalo.", from: "desde $"},
+            {name: "Pave Tradicional", desc: "Mix box para regalo.", from: "desde $"},
           ].map((p, i) => (
             <Card key={i} className="p-6 flex flex-col">
               <div className="flex items-start justify-between">
