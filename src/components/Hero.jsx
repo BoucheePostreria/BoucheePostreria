@@ -6,23 +6,23 @@ function Hero() {
   return (
     <section id="home" className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute -top-24 -right-24 h-72 w-72 md:h-96 md:w-96 rounded-full bg-rose-200/50 blur-2xl" />
+        <div className="absolute -top-4 -right-24 h-72 w-72 md:h-96 md:w-96 rounded-full bg-rose-200/50 blur-2xl" />
         <div className="absolute -bottom-24 -left-24 h-72 w-72 md:h-96 md:w-96 rounded-full bg-pink-200/50 blur-2xl" />
       </div>
-      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 pt-12 pb-16 grid md:grid-cols-2 gap-10 items-center">
+      <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 pt-5 pb-16 grid md:grid-cols-2 gap-10 items-center">
         <motion.div 
           initial={{ opacity: 0, y: 10 }} 
           animate={{ opacity: 1, y: 0 }} 
           transition={{ duration: 0.6 }} 
           className="text-center md:text-left"
         >
-          <div className="flex items-center justify-center md:justify-start gap-4 mb-12">
-            <Badge variant="silver">🎂 Repostería artesanal</Badge>
+          <div className="flex items-center justify-center md:justify-start gap-12 mb-8">
+            <Badge variant="gold">🎂 Repostería artesanal</Badge>
             <Badge variant="gold">✨ Hecho con amor</Badge>
           </div>
           
           {/* Imagen decorativa antes del título */}
-          <div className="w-[300px] h-[300px] shrink-0 rounded-full overflow-hidden bg-red-500 mx-auto mt-20 self-start">
+          <div className="w-[300px] h-[300px] shrink-0 rounded-full overflow-hidden bg-red-500 mx-auto mt-3 mb-3 self-start">
            <img 
             src="./images/hero.jpg" 
             alt="Bouchée Logo"
@@ -34,7 +34,7 @@ function Hero() {
             Bouchée — Postería <span className="text-rose-600">Exquisita</span>
           </h1>
           <p className="text-lg text-gray-700 mb-6">
-            Cupcakes, tortas y postres finos, elaborados con ingredientes de calidad y diseño impecable. Perfectos para regalos, eventos y antojos especiales.
+            Cupcakes merengues y postres finos, elaborados con ingredientes de calidad y diseño impecable. Perfectos para regalos, eventos y antojos especiales.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start mb-6">
             <a
@@ -63,12 +63,12 @@ function Hero() {
           className="grid grid-cols-3 gap-3 md:gap-4"
         >
           {[
-            { src: "/images/merengue_acercamiento.jpeg", alt: "Merengue artesanal" },
-            { src: "/images/pave.jpeg", alt: "Pavé tradicional" },
-            { src: "/images/pie_arandanos.jpeg", alt: "Pie de arándanos" },
-            { src: "/images/pie_limon.jpeg", alt: "Pie de limón" },
-            { src: "/images/pie_mango.jpeg", alt: "Pie de mango" },
-            { src: "/images/pie_oreo.jpeg", alt: "Pie de Oreo" }
+            { src: "./images/merengue_acercamiento.jpeg", alt: "Merengue artesanal" },
+            { src: "./images/pave.jpeg", alt: "Pavé tradicional" },
+            { src: "./images/pie_arandanos.jpeg", alt: "Pie de arándanos" },
+            { src: "./images/pie_limon.jpeg", alt: "Pie de limón" },
+            { src: "./images/pie_mango.jpeg", alt: "Pie de mango" },
+            { src: "./images/pie_oreo.jpeg", alt: "Pie de Oreo" }
           ].map((item, i) => (
             <div key={item.alt} className="aspect-square rounded-2xl overflow-hidden shadow-sm border border-gray-100 relative group">
               <img 

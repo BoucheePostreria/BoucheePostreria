@@ -1,28 +1,37 @@
 import React from "react";
-
-const items = [
-  { name: "Cheesecake de frutos rojos", price: "$12.000" },
-  { name: "Brownie con helado", price: "$10.000" },
-  { name: "Tiramis�", price: "$15.000" },
-  { name: "Tres leches", price: "$9.000" },
-];
+import Card from "./Card";
+import Section from "./Section";
 
 function Menu() {
   return (
-    <section id="menu" className="py-16 px-8 bg-gray-50">
-      <h2 className="text-3xl font-bold text-center mb-10">Nuestro Men�</h2>
-      <div className="max-w-3xl mx-auto grid gap-6">
-        {items.map((item, index) => (
-          <div
-            key={index}
-            className="flex justify-between items-center bg-white p-4 rounded-lg shadow"
-          >
-            <span className="font-medium">{item.name}</span>
-            <span className="text-pink-600 font-semibold">{item.price}</span>
-          </div>
-        ))}
-      </div>
-    </section>
+    <Section id="menu" title="Menú destacado" subtitle="Sabores que enamoran... Personalizamos diseños.">
+        <div className="grid md:grid-cols-3 gap-6">
+          {[
+            {name: "Cupcakes Flores y Suculentas", desc: "Caja x6 o x12. Decoración premium.", from: "desde $"},
+            {name: "Cheesecake Sabores Surtidos", desc: "Clásico, maracuyá o frutos rojos.", from: "desde $"},
+            {name: "Pie Sabores Surtidos", desc: "Paleta de colores y sabores.", from: "desde $"},
+            {name: "Merengues", desc: "Mix box para regalo.", from: "desde $"},
+            {name: "Pave Tradicional", desc: "Mix box para regalo.", from: "desde $"},
+          ].map((p, i) => (
+            <Card key={i} className="p-6 flex flex-col">
+              <div className="flex items-start justify-between">
+                <h3 className="text-lg font-semibold">{p.name}</h3>
+                <span className="text-xs rounded-full bg-rose-100 text-rose-700 px-2 py-1 uppercase tracking-wide">Popular</span>
+              </div>
+              <p className="mt-2 text-gray-600 text-sm flex-1">{p.desc}</p>
+              <div className="mt-4 flex items-center justify-between">
+                <span className="text-sm text-gray-700">{p.from}</span>
+                <a
+                  href={`https://wa.me/573104883365?text=Hola%20Bouch%C3%A9e%2C%20quiero%20informaci%C3%B3n%20sobre%20${encodeURIComponent(p.name)}`}
+                  className="text-rose-700 hover:text-rose-800 text-sm font-medium"
+                >
+                  Pedir ➜
+                </a>
+              </div>
+            </Card>
+          ))}
+        </div>
+      </Section>
   );
 }
 
