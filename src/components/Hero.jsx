@@ -22,14 +22,14 @@ function Hero() {
           </div>
           
           {/* Imagen decorativa antes del título */}
-          <div className="w-6 h-6 mx-auto md:mx-0 mb-4 rounded-full overflow-hidden shadow-lg">
-            <img 
-              src="/images/hero.jpg" 
-              alt="Bouchée Logo" 
-              className="w-full h-full object-cover"
-            />
+          <div className="w-[300px] h-[300px] shrink-0 rounded-full overflow-hidden bg-red-500 mx-auto mt-20 self-start">
+           <img 
+            src="/images/hero.jpg" 
+            alt="Bouchée Logo"
+            className="!w-[300px] !h-[300px] object-contain"
+           />
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl font-semibold leading-tight tracking-tight mb-4">
             Bouchée — Postería <span className="text-rose-600">Exquisita</span>
           </h1>
