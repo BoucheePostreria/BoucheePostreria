@@ -23,9 +23,9 @@ function Hero() {
           </div>
           
           {/* Imagen decorativa antes del título */}
-          <div className="w-[300px] h-[300px] shrink-0 rounded-full overflow-hidden bg-red-500 mx-auto mt-3 mb-3 self-start">
+          <div className="w-[300px] h-[300px] shrink-0 overflow-hidden mx-auto mt-3 mb-3 self-start">
            <img 
-            src="./images/hero.jpg" 
+            src="./images/bg_transp.png" 
             alt="Bouchée Logo"
             className="!w-[300px] !h-[300px] object-contain"
            />
