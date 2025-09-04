@@ -12,6 +12,7 @@ function Contact() {
             <li>📱 WhatsApp: <a className="text-rose-700 hover:text-rose-800" href="https://wa.me/573104883365">+57 310 488 3365</a></li>
             <li>✉️ Correo: <a className="text-rose-700 hover:text-rose-800" href="mailto:boucheepostreria@gmail.com?subject=Pedido%20Bouch%C3%A9e">boucheepostreria@gmail.com</a></li>
             <li>📸 Instagram: <a className="text-rose-700 hover:text-rose-800" href="https://www.instagram.com/boucheepostreria?igsh=MTFuaThjYmVwMWtmdg==" target="_blank" rel="noreferrer">@boucheepostreria</a></li>
+            <li>📺 Twitch: <a className="text-rose-700 hover:text-rose-800" href="https://www.twitch.tv/bouchee_postreria?sr=a" target="_blank" rel="noreferrer">bouchee_postreria</a></li>
             <li>⏰ Horario: Lun–Sáb · 9:00–18:00</li>
           </ul>
         </Card>
