@@ -1,6 +1,7 @@
 ﻿import React from "react";
 import { motion } from "framer-motion";
 import Badge from "./Badge";
+import { FaWhatsapp } from "react-icons/fa";
 
 function Hero() {
   return (
@@ -31,17 +32,17 @@ function Hero() {
           </div>
 
           <h1 className="text-4xl md:text-6xl font-semibold leading-tight tracking-tight mb-4">
-            Bouchée — Postería <span className="text-rose-600">Exquisita</span>
+            Bouchée Postería <span className="text-rose-600">Exquisita</span>
           </h1>
           <p className="text-lg text-gray-700 mb-6">
-            Cupcakes merengues y postres finos, elaborados con ingredientes de calidad y diseño impecable. Perfectos para regalos, eventos y antojos especiales.
+            Cupcakes, merengues y postres finos; elaborados con ingredientes de calidad y diseño impecable. Perfectos para regalos, eventos y antojos especiales.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start mb-6">
             <a
               href="https://wa.me/573104883365?text=Hola%20Bouch%C3%A9e%2C%20quiero%20cotizar%20un%20pedido"
               className="inline-flex items-center justify-center rounded-xl px-6 py-3 bg-rose-600 text-white hover:bg-rose-700 shadow"
             >
-              💬 Cotizar por WhatsApp
+               <FaWhatsapp className="w-7 h-7" /> Cotizar por WhatsApp
             </a>
             <a
               href="#menu"

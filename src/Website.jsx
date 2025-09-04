@@ -7,6 +7,8 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
 import Menu from "./components/Menu";
+import BannerWsp from "./components/BannerWsp";
+import BannerTwich from "./components/BannerTwich";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function Website() {
@@ -14,32 +16,15 @@ export default function Website() {
     <div className="min-h-screen bg-gradient-to-b from-primary/10 via-secondary/10 to-white text-gray-900 antialiased">
       <Navbar />
       <Hero />
-      <Menu/>
+      <Menu />
       <Gallery />
+      <BannerTwich />
       <About />
       <Opinions />
-
-      {/* CTA STRIP */}
-      <section className="py-12">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
-          <div className="rounded-2xl bg-gradient-to-r from-rose-600 to-pink-500 text-white p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow">
-            <div>
-              <h3 className="text-2xl md:text-3xl font-semibold">¿Listx para endulzar tu evento?</h3>
-              <p className="mt-2 text-white/90">Escríbenos por WhatsApp y armamos tu pedido personalizado.</p>
-            </div>
-            <a
-              className="inline-flex items-center rounded-xl bg-white text-rose-700 px-6 py-3 hover:bg-gray-50"
-              href="https://wa.me/573104883365?text=Hola%20Bouch%C3%A9e%2C%20quiero%20un%20presupuesto"
-            >
-              💬 Abrir WhatsApp
-            </a>
-          </div>
-        </div>
-      </section>
-
+      <BannerWsp />
       <Contact />
       <Footer />
-  
+
       {/* Floating WhatsApp */}
       <a
         href="https://wa.me/573104883365?text=Hola%20Bouch%C3%A9e%2C%20quiero%20hacer%20un%20pedido"
